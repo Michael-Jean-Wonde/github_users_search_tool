@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:github_search/repo_page.dart';
 import 'package:github_search/func/data_source.dart';
 import 'package:github_search/model/user_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -114,33 +113,7 @@ class _UserPageState extends State<UserPage> {
             const SizedBox(
               width: 30,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InkWell(
-                  child: Column(
-                    children: [
-                      Text("${user.publicRepos}"),
-                      const Text(
-                        "Repos",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  onTap: () {
-                    var route = MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          RepoPage(username: widget.username),
-                    );
-                    Navigator.of(context).push(route);
-                  },
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                
-              ],
-            ),
+            
           ],
         ),
         const SizedBox(
